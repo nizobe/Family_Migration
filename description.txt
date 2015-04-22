@@ -1,0 +1,1 @@
+Takes user input as a list of places, then plays back the migration on a map using Leaflet.js
