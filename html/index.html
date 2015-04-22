@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>From Where to Where?</title>
+		<!-- library css -->
+		<!-- Leaflet.js CSS -->
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+		<!-- custom CSS -->
+		<link rel="stylesheet" type="text/css" href="../css/map.css">
+		<!-- JavaScript libraries -->
+		<!-- Leaflet.js -->
+		<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+	</head>
+	<body>
+		<div id='map'></div><!--holds the actual map-->
+		<script type="text/javascript">
+			//MapQuest streets base layer
+			var mqStreetsLayer = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpeg', {
+				attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+				subdomains: '1234',
+				maxZoom : 18,
+				minZoom: 10,
+				name: "Streets"
+			});
+
+			//ArcGIS aerial base layer
+			var aerialLayer = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
+
+			//toggleable base layers (mutually exclusive)
+			var baseLayers = {
+				"Streets": mqStreetsLayer,
+				"Aerial": aerialLayer
+			};
+
+			//create the actual map with default zoom/view set to downtown Chicago and streets by default
+			var map = L.map('map', {
+				center: [41.869910, -87.65],
+				zoom: 12,
+				layers: mqStreetsLayer//, aerialLayer]// baseLayers[1].layer
+			});
+
+			//create layer control with baseLayers, no overlays, and no options
+			L.control.layers(baseLayers, null, null).addTo(map);
+		</script>
+	</body>
+</html>

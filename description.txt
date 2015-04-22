@@ -1,1 +1,17 @@
 Takes user input as a list of places, then plays back the migration on a map using Leaflet.js
+
+-Leaflet Playback
+https://github.com/hallahan/LeafletPlayback
+playback of point via GeoJSON on line with slider and controls
+
+-Smooth Marker Bouncing
+https://github.com/hosuaby/Leaflet.SmoothMarkerBouncing
+bounces a marker -might come in handy
+
+-Leaflet Animated Marker
+https://github.com/openplans/Leaflet.AnimatedMarker
+animates a marker over a poly line. Doesn't seem to have controls by default
+
+-Leaflet Timeline
+https://github.com/skeate/Leaflet.timeline
+honorable mention. again, might come in handy
