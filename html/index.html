@@ -9,14 +9,17 @@
 		<link rel="stylesheet" type="text/css" href="../css/map.css">
 		<!-- JavaScript libraries -->
 		<!-- Leaflet.js -->
-		<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
-		<sript src="../lib/LeafletPlayback-master/dist/LeafletPlayback.js"></sript>
+		
 		<!--currently left as full instead of minified js for testing/development-->
 	</head>
 	<body>
 		<div id='map'></div><!--holds the actual map-->
-		<script src="../data/locations.js"></script>
+		
 		<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+		<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+		<sript src="../lib/LeafletPlayback-master/dist/LeafletPlayback.js"></sript>
+		<script src="../data/locations.js"></script>
+		<script src="../js/playback.js"></script>
 		<script type="text/javascript">
 			/*
 			//MapQuest streets base layer
@@ -61,6 +64,6 @@
 		    var playback = new L.Playback(map, demoTracks, null, playbackOptions);
 		    */
 		</script>
-		<script src="../js/playback.js"></script>
+		
 	</body>
 </html>
