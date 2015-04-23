@@ -1,5 +1,4 @@
 $(function() {
-    /*
     // Setup leaflet map
     var map = new L.Map('map');
 
@@ -14,7 +13,6 @@ $(function() {
     // =====================================================
     // =============== Playback ============================
     // =====================================================
-    */
     // Playback options
     var playbackOptions = {
         playControl: true,

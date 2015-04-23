@@ -25,6 +25,6 @@ var niko_locations = {
 			1404172800,//harrison & western
 		],//end time
 	}//end properties
-}//end niko_locations
+};//end niko_locations
 
 var locations = [niko_locations];//[blodgett, drive, houseToCoordley, tillicum];
