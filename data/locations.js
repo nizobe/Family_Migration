@@ -26,3 +26,5 @@ var niko_locations = {
 		],//end time
 	}//end properties
 }//end niko_locations
+
+var locations = [niko_locations];//[blodgett, drive, houseToCoordley, tillicum];
