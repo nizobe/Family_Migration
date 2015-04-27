@@ -21,5 +21,5 @@ $(function() {
     };
         
     // Initialize playback
-    var playback = new L.Playback(map, n2locations, null, playbackOptions);   
+    var playback = new L.Playback(map, demoTracks, null, playbackOptions);   
 });
