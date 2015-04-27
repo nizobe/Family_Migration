@@ -16,6 +16,15 @@ var niko_locations = {
 		"title": "Niko",
 		"path_options": {"color": "red"},
 		"time": [
+		/*
+			1369786338000,
+			1369786340000,
+			1369786342000,
+			1369786344000,
+			1369786346000,
+			1369786348000,
+			1369786349000,
+			*/
 			664502400,//seattle
 			694224000,//honolulu
 			820454400,//fort worth
@@ -23,6 +32,7 @@ var niko_locations = {
 			1041379200,//palatine
 			1251244800,//uic (jst)
 			1404172800,//harrison & western
+			
 		],//end time
 	}//end properties
 };//end niko_locations
