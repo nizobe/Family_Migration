@@ -11,7 +11,7 @@
 		<!-- Leaflet.js -->
 		<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
 		<!--currently left as full instead of minified js for testing/development-->
-		<script type="text/javascript" src="../Leaflet.MovingMarker-master/MovingMarker.js"></script>
+		<script type="text/javascript" src="../lib/Leaflet.MovingMarker-master/MovingMarker.js"></script>
 		<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
 	</head>
 	<body>
@@ -22,7 +22,7 @@
 				attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
 				subdomains: '1234',
 				maxZoom : 18,
-				minZoom: 10,
+				minZoom: 5,
 				name: "Streets"
 			});
 
@@ -44,6 +44,18 @@
 
 			//create layer control with baseLayers, no overlays, and no options
 			L.control.layers(baseLayers, null, null).addTo(map);
+
+			//==========MOVING MARKER=======
+			var myMovingMarker = L.Marker.movingMarker([
+				[47.606284, -122.331786],
+				[21.306479, -157.855962],
+				[32.757515, -97.336011],
+				[32.528217, -93.757405],
+				[42.110741, -88.032199],
+				[41.866114, -87.646157],
+				[41.874008, -87.686129]],
+                [2000, 2000, 2000, 2000, 2000, 2000],
+                {"autostart": true}).addTo(map);
 
 			//================= PLAYBACK ==================
 			/*
